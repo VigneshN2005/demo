@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', serif;
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 16px;
+        }
+        button {
+            width: 100%;
+            padding: 15px;
+            background: green;
+            color: white;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: darkgreen;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            background: lightgray;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Area & Perimeter Calculator</h1>
+    
+    <label>Length:</label>
+    <input type="number" id="length" placeholder="Enter length">
+    
+    <label>Width:</label>
+    <input type="number" id="width" placeholder="Enter width">
+    
+    <button onclick="calculate()">Calculate</button>
+    
+    <div class="result" id="result"></div>
+
+    <script>
+        function calculate() {
+            var length = parseFloat(document.getElementById('length').value);
+            var width = parseFloat(document.getElementById('width').value);
+            
+            var area = length * width;
+            var perimeter = 2 * (length + width);
+            
+            document.getElementById('result').innerHTML = 
+                'Area: ' + area + '<br>' +
+                'Perimeter: ' + perimeter;
+        }
+    </script>
+</body>
+</html>
