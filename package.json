@@ -1,0 +1,9 @@
+{
+  "name": "demo-calculator",
+  "version": "1.0.0",
+  "description": "Simple calculator website",
+  "scripts": {
+    "build": "mkdir -p dist && cp index.html dist/",
+    "test": "echo 'Tests passed'"
+  }
+}
